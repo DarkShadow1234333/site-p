@@ -4,54 +4,114 @@
   <meta charset="UTF-8">
   <title>برنامه‌نویسی؛ مهارتی برای آینده</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
   <style>
+    /* تنظیمات اولیه */
     body {
       direction: rtl;
-      font-family: "Tahoma", sans-serif;
-      background-color: #f8f8f8;
-      color: #222;
+      font-family: 'Vazirmatn', sans-serif;
       margin: 0;
       padding: 0;
+      background: url('https://source.unsplash.com/1600x900/?technology,programming') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
+
     .container {
       max-width: 900px;
-      margin: 50px auto;
-      background-color: white;
+      margin: 100px auto;
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-in-out;
     }
-    h1, h2 {
-      color: #1a1a1a;
-    }
+
     h1 {
-      font-size: 30px;
+      font-size: 36px;
       margin-bottom: 20px;
+      color: #ff6347;
+      text-align: center;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     }
+
     h2 {
+      font-size: 28px;
       margin-top: 30px;
-      font-size: 22px;
+      color: #FFD700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-    p {
-      line-height: 2;
-      font-size: 17px;
-      margin-top: 12px;
+
+    p, ul {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-top: 15px;
     }
-    ul {
-      line-height: 2;
-      font-size: 16px;
-      padding-right: 20px;
-    }
+
     li {
       margin-bottom: 10px;
     }
+
     strong {
-      color: #000;
+      color: #ff6347;
+    }
+
+    /* افزودن انیمیشن برای وارد شدن */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* دکمه‌های جذاب */
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #ff6347;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+      background-color: #ff4500;
+      transform: scale(1.1);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* اضافه کردن سایه برای متن */
+    h1, h2, p {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* تنظیمات آی‌کون‌ها */
+    .icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+      color: #FFD700;
+      transition: transform 0.3s;
+    }
+
+    .icon:hover {
+      transform: rotate(360deg);
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="icon">
+      <i class="fas fa-code"></i>
+    </div>
     <h1>برنامه‌نویسی؛ مهارتی برای آینده</h1>
 
     <h2>مقدمه</h2>
@@ -61,58 +121,3 @@
     <p>برنامه‌نویسی فرآیند طراحی، نوشتن، تست کردن و نگهداری از دستوراتی است که کامپیوتر می‌فهمد. این دستورات به کامپیوتر می‌گویند که چه کاری انجام دهد. درست مانند دستور آشپزی برای پخت غذا، برنامه‌نویسی هم یک دستورالعمل برای حل یک مسئله یا انجام یک عملیات است.</p>
 
     <h2>چرا برنامه‌نویسی مهم است؟</h2>
-    <ul>
-      <li><strong>زبان مشترک با ماشین‌ها:</strong> سایت‌ها، اپ‌ها، بازی‌ها و حتی سیستم‌های بانکی و آموزشی با برنامه‌نویسی ساخته می‌شوند.</li>
-      <li><strong>دروازه‌ای به دنیای مشاغل آینده:</strong> مشاغلی مثل توسعه‌دهنده وب، برنامه‌نویس موبایل، مهندس داده و متخصص هوش مصنوعی همگی به برنامه‌نویسی نیاز دارند.</li>
-      <li><strong>قدرت ساختن:</strong> برنامه‌نویسی به تو قدرت خلق می‌ده. فقط باید بخوای.</li>
-    </ul>
-
-    <h2>مزایای یادگیری برنامه‌نویسی</h2>
-    <ul>
-      <li>درآمد بالا و امنیت شغلی</li>
-      <li>کار از خانه یا هر جای دنیا</li>
-      <li>پروژه‌های مستقل و استارتاپ شخصی</li>
-      <li>تقویت منطق و مهارت حل مسئله</li>
-      <li>امکان ورود به زمینه‌هایی مثل هوش مصنوعی، بلاک‌چین و بیگ دیتا</li>
-    </ul>
-
-    <h2>برنامه‌نویسی مناسب چه کسانی است؟</h2>
-    <ul>
-      <li>نوجوان‌هایی که دنبال آینده‌ی شغلی روشن‌ان</li>
-      <li>دانش‌آموزانی که به ریاضی، منطق یا بازی‌سازی علاقه دارن</li>
-      <li>بزرگ‌سالانی که قصد تغییر مسیر شغلی دارن</li>
-      <li>افرادی که دنبال کار از راه دور یا درآمد دلاری هستن</li>
-    </ul>
-
-    <h2>از کجا شروع کنم؟</h2>
-    <p><strong>۱. انتخاب زبان:</strong> پایتون برای شروع عالیه. جاوااسکریپت برای طراحی وب، جاوا یا Kotlin برای موبایل.</p>
-    <p><strong>۲. منابع آموزشی:</strong> freeCodeCamp، SoloLearn، یوتیوب فارسی و انگلیسی</p>
-    <p><strong>۳. پروژه‌محور کار کن:</strong> ماشین‌حساب، وبلاگ شخصی، بات تلگرام و...</p>
-
-    <h2>آینده‌ی برنامه‌نویسی</h2>
-    <ul>
-      <li>هوش مصنوعی و یادگیری ماشین</li>
-      <li>امنیت سایبری</li>
-      <li>واقعیت مجازی و افزوده</li>
-      <li>فناوری‌های مالی (FinTech)</li>
-      <li>پزشکی هوشمند و سلامت دیجیتال</li>
-    </ul>
-
-    <h2>آیا برنامه‌نویسی سخت است؟</h2>
-    <p>نه! شاید اولش سخت به نظر بیاد، ولی با تمرین ساده می‌شه. مثل یادگیری یک زبان جدیده.</p>
-
-    <h2>نکاتی برای موفقیت</h2>
-    <ul>
-      <li>پروژه‌محور یاد بگیر</li>
-      <li>کد رو حفظ نکن، دلیلش رو بفهم</li>
-      <li>سوال بپرس (گوگل، فروم‌ها، چت‌جی‌پی‌تی)</li>
-      <li>کاراتو توی گیت‌هاب یا سایت شخصی بذار</li>
-    </ul>
-
-    <h2>جمع‌بندی</h2>
-    <p>برنامه‌نویسی فقط یک شغل نیست؛ ابزاری‌ست برای ساختن آینده. باهاش می‌تونی خلاق باشی، درآمد خوب داشته باشی، و دنیای اطرافت رو بهتر بسازی. مهم نیست الان کجایی یا چی بلدی، فقط شروع کن.</p>
-
-    <p><strong>دنیای آینده منتظر توئه!</strong></p>
-  </div>
-</body>
-</html>
