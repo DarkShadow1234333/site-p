@@ -2,158 +2,134 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>هوش مصنوعی پیشرفته؛ انقلاب در آینده فناوری</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>هوش مصنوعی پیشرفته</title>
   <style>
-    /* تنظیمات اولیه */
     body {
-      direction: rtl;
-      font-family: 'Vazirmatn', sans-serif;
+      font-family: 'Tahoma', sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
       margin: 0;
       padding: 0;
-      background: url('https://source.unsplash.com/1600x900/?technology,ai') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
+      direction: rtl;
     }
-
     .container {
-      max-width: 900px;
-      margin: 100px auto;
-      background-color: rgba(0, 0, 0, 0.7);
+      max-width: 1200px;
+      margin: 50px auto;
       padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      animation: fadeIn 2s ease-in-out;
+      background: #222;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
-
+    h1, h2 {
+      color: #FFD700;
+      text-align: center;
+    }
     h1 {
       font-size: 36px;
       margin-bottom: 20px;
-      color: #ff6347;
-      text-align: center;
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1.5s ease;
     }
-
     h2 {
       font-size: 28px;
-      margin-top: 30px;
-      color: #FFD700;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 15px;
+      animation: fadeIn 1.5s ease;
     }
-
-    p, ul {
+    p {
       font-size: 18px;
       line-height: 1.8;
-      margin-top: 15px;
+      margin-top: 12px;
+      text-align: justify;
+    }
+    .robot-img {
+      display: block;
+      margin: 20px auto;
+      width: 250px;
+      animation: zoomIn 2s ease-in-out;
+    }
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #FFD700;
+      color: #222;
+      font-size: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+    .button:hover {
+      background-color: #ffcc00;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }
 
-    li {
-      margin-bottom: 10px;
-    }
-
-    strong {
-      color: #ff6347;
-    }
-
-    /* افزودن انیمیشن برای وارد شدن */
+    /* Animations */
     @keyframes fadeIn {
-      0% {
+      from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(-50px);
       }
-      100% {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    /* دکمه‌های جذاب */
-    .btn {
-      display: inline-block;
+    @keyframes zoomIn {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .robot-container {
+      display: flex;
+      justify-content: space-around;
       margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #ff6347;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .btn:hover {
-      background-color: #ff4500;
-      transform: scale(1.1);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    .robot-container img {
+      width: 150px;
+      height: 150px;
+      transition: transform 0.3s ease-in-out;
     }
 
-    /* اضافه کردن سایه برای متن */
-    h1, h2, p {
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    /* تنظیمات آی‌کون‌ها */
-    .icon {
-      font-size: 50px;
-      margin-bottom: 15px;
-      color: #FFD700;
-      transition: transform 0.3s;
-    }
-
-    .icon:hover {
-      transform: rotate(360deg);
+    .robot-container img:hover {
+      transform: scale(1.2);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="icon">
-      <i class="fas fa-robot"></i>
+    <h1>هوش مصنوعی پیشرفته؛ دنیای آینده</h1>
+    <p>هوش مصنوعی، که به اختصار AI نامیده می‌شود، به سیستم‌های کامپیوتری اطلاق می‌شود که قادرند با استفاده از داده‌ها و الگوریتم‌های پیچیده، کارهایی انجام دهند که قبلاً نیازمند هوش انسانی بوده است. امروزه هوش مصنوعی در بسیاری از حوزه‌ها نقش مهمی ایفا می‌کند، از سیستم‌های توصیه‌گر در اپلیکیشن‌های مختلف گرفته تا ربات‌های صنعتی و حتی درمان بیماری‌ها.</p>
+
+    <div class="robot-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Robot_Icon.png" alt="Robot 1" class="robot-img">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Robot_Icon_2.png" alt="Robot 2" class="robot-img">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Robot_Icon_3.png" alt="Robot 3" class="robot-img">
     </div>
-    <h1>هوش مصنوعی پیشرفته؛ انقلاب در آینده فناوری</h1>
 
-    <h2>مقدمه</h2>
-    <p>هوش مصنوعی (AI) به عنوان یکی از قدرتمندترین فناوری‌های عصر حاضر، در حال تغییر نحوه زندگی انسان‌ها و دنیای فناوری است. از ربات‌های هوشمند گرفته تا سیستم‌های توصیه‌گر، هوش مصنوعی در هر زمینه‌ای نفوذ کرده و باعث تحولاتی عظیم در صنایع مختلف می‌شود.</p>
-
-    <h2>هوش مصنوعی چیست؟</h2>
-    <p>هوش مصنوعی به مجموعه‌ای از الگوریتم‌ها و سیستم‌های نرم‌افزاری اطلاق می‌شود که قادر به شبیه‌سازی توانایی‌های ذهنی انسان‌ها هستند. این سیستم‌ها می‌توانند تصمیم‌گیری، یادگیری، حل مسائل و حتی خلق محتوا را انجام دهند. یکی از مهم‌ترین بخش‌های هوش مصنوعی، یادگیری ماشین است که به کامپیوترها این امکان را می‌دهد که از داده‌ها یاد بگیرند و به مرور زمان عملکرد خود را بهبود بخشند.</p>
-
-    <h2>اهمیت هوش مصنوعی در دنیای امروز</h2>
+    <h2>ویژگی‌های هوش مصنوعی</h2>
+    <p>هوش مصنوعی در طیف وسیعی از کاربردها مورد استفاده قرار می‌گیرد. از ویژگی‌های برجسته هوش مصنوعی می‌توان به موارد زیر اشاره کرد:</p>
     <ul>
-      <li><strong>تحول در صنایع:</strong> هوش مصنوعی به صنایع مختلف از جمله پزشکی، خودروسازی، کشاورزی و خدمات مالی کمک کرده است تا بهره‌وری و کارایی خود را بهبود بخشند.</li>
-      <li><strong>خودکارسازی فرآیندها:</strong> با استفاده از هوش مصنوعی، فرآیندهای پیچیده و تکراری به صورت خودکار انجام می‌شوند که به کاهش هزینه‌ها و افزایش سرعت کمک می‌کند.</li>
-      <li><strong>تصمیم‌گیری بهتر:</strong> سیستم‌های هوش مصنوعی قادر به تحلیل حجم وسیعی از داده‌ها هستند و می‌توانند تصمیمات بهتری در زمان واقعی اتخاذ کنند.</li>
-    </ul>
-
-    <h2>کاربردهای هوش مصنوعی</h2>
-    <ul>
-      <li>تشخیص بیماری‌ها و پیش‌بینی روند درمان در پزشکی</li>
-      <li>سیستم‌های خودران (اتومبیل‌های بدون راننده)</li>
-      <li>هوش تجاری و تحلیل داده‌های بزرگ</li>
-      <li>دستیارهای مجازی مانند Siri و Google Assistant</li>
-      <li>ربات‌های هوشمند برای انجام کارهای مختلف</li>
+      <li>پردازش و تحلیل داده‌های بزرگ (Big Data)</li>
+      <li>یادگیری ماشین و الگوریتم‌های پیچیده</li>
+      <li>روبات‌های هوشمند و انسان‌نما</li>
+      <li>سیستم‌های تشخیص گفتار و ترجمه ماشینی</li>
+      <li>سیستم‌های خودران و ربات‌های خدماتی</li>
     </ul>
 
     <h2>آینده هوش مصنوعی</h2>
-    <p>آینده هوش مصنوعی بسیار روشن است و روز به روز بیشتر در زندگی ما تاثیر خواهد گذاشت. از بهبود کیفیت زندگی و کار گرفته تا حل مسائل پیچیده بشری، هوش مصنوعی می‌تواند به یکی از مهم‌ترین ابزارهای بشر تبدیل شود. در آینده‌ای نه چندان دور، شاهد خواهیم بود که هوش مصنوعی نه تنها در حوزه‌های علمی و فنی، بلکه در زندگی روزمره و مشاغل مختلف نیز نقش‌های کلیدی ایفا کند.</p>
+    <p>آینده هوش مصنوعی با پیشرفت‌های روزافزون تکنولوژی، به جایی خواهد رسید که بسیاری از فعالیت‌های روزمره و پیچیده توسط سیستم‌های هوشمند انجام خواهد شد. از تشخیص بیماری‌ها گرفته تا تحلیل داده‌های تجاری و حتی ساخت ربات‌های اجتماعی و آموزشی، تمامی این موارد در آینده به بخش جدایی‌ناپذیر زندگی بشر تبدیل خواهند شد.</p>
 
-    <h2>آیا هوش مصنوعی تهدیدی برای مشاغل است؟</h2>
-    <p>بسیاری از افراد نگران این هستند که هوش مصنوعی جایگزین شغل‌های انسان‌ها شود. با این حال، حقیقت این است که هوش مصنوعی در حال تغییر ماهیت شغل‌ها است، نه حذف آن‌ها. به جای جایگزینی انسان‌ها، AI می‌تواند به آن‌ها کمک کند تا وظایف پیچیده‌تر و خلاقانه‌تری انجام دهند و به سطح جدیدی از بهره‌وری برسند.</p>
-
-    <h2>چطور وارد دنیای هوش مصنوعی شویم؟</h2>
-    <ul>
-      <li>یادگیری زبان‌های برنامه‌نویسی مثل Python و R</li>
-      <li>آشنایی با الگوریتم‌های یادگیری ماشین و شبکه‌های عصبی</li>
-      <li>تمرین با پروژه‌های عملی و دیتاست‌های مختلف</li>
-      <li>استفاده از منابع آموزشی آنلاین مانند Coursera، edX و Kaggle</li>
-    </ul>
-
-    <h2>جمع‌بندی</h2>
-    <p>هوش مصنوعی آینده‌ای هیجان‌انگیز و پر از فرصت‌های بی‌پایان دارد. چه به دنبال بهبود فرآیندهای تجاری باشید و چه در حال توسعه فناوری‌های نوین، هوش مصنوعی قطعا بخش مهمی از مسیر شما خواهد بود. برای شروع، کافی است یک قدم کوچک بردارید و به یادگیری این حوزه جذاب بپردازید.</p>
-
-    <p><strong>Made by mmd</strong></p>
+    <a href="https://www.openai.com" class="button">اطلاعات بیشتر</a>
   </div>
 </body>
 </html>
