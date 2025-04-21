@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-
+Sitemap: https://ctrlc-ctrlv1.onrender.com/sitemap.xml
